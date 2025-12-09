@@ -1,0 +1,130 @@
+<!-- Esta é a página de simulação de financiamento do site "Prime Motors". -->
+<!-- Permite ao usuário calcular parcelas de financiamento com base no valor do veículo, entrada, juros e número de parcelas. -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <!-- Define a codificação de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Configura a viewport para dispositivos móveis -->
+    <link rel="stylesheet" href="css/styles.css?v=1.1">
+    <!-- Vincula a folha de estilos CSS externa -->
+    <script src="js/jason.js" defer></script>
+    <!-- Carrega o script JavaScript externo de forma assíncrona -->
+    <link rel="icon" href="img\Gemini_Generated_Image_owil7gowil7gowil.PNG" type="image/png">
+    <!-- Define o ícone da página -->
+    <title>Financiamento</title>
+    <!-- Título da página exibido na aba do navegador -->
+</head>
+<body>
+    <header>
+      <!-- Cabeçalho da página com navegação -->
+      <a href="home.html">
+        <!-- Link para a página inicial -->
+        <img src="img/logo.png" width="130" height="110"><span class="logo"></span>
+        <!-- Logo da empresa -->
+      </a>
+      <nav>
+        <!-- Menu de navegação -->
+      <ul class="navlinks">
+        <li><a href="home.html">Início</a></li>
+        <!-- Link para a página inicial -->
+        <li><a href="catalogo.html">Catálogo</a></li>
+        <!-- Link para o catálogo -->
+        <li><a href="financiamento.html">Simular Financiamento</a></li>
+        <!-- Link para a simulação de financiamento (página atual) -->
+        <li><a href="fipe.html">Tabela Fipe</a></li>
+        <!-- Link para a tabela FIPE -->
+      </ul>
+      </nav>
+        <a>
+            <!-- Link para a página de login/cadastro -->
+            <button onclick="window.location.href='login.php'" type="submit">Login/Cadastro</button>
+            <!-- Botão para acessar login/cadastro -->
+        </a>
+      <div class="hamburger" onclick="toggleMenu()">
+        <!-- Menu hambúrguer para dispositivos móveis -->
+        <span></span>
+        <span></span>
+        <span></span>
+        </div>
+    </header>
+    <h2>Simulador de Financiamento:</h2>
+    <!-- Título da seção de simulação de financiamento -->
+      <div class="simulador-container">
+          <!-- Container do formulário de simulação -->
+          <label>Valor do Veículo (R$):</label>
+          <!-- Campo para inserir o valor do veículo -->
+          <input type="number" id="valor" placeholder="Ex: 50.000" required>
+          <!-- Input numérico para o valor do veículo -->
+
+          <label>Entrada (R$):</label>
+          <!-- Campo para inserir o valor da entrada -->
+          <input type="number" id="entrada" placeholder="Ex: 5.000">
+          <!-- Input numérico para a entrada -->
+
+          <label>Taxa de Juros (% ao mês):</label>
+          <!-- Campo para inserir a taxa de juros -->
+          <input type="number" id="juros" step="0.1" placeholder="Ex: 1.5" required>
+          <!-- Input numérico para a taxa de juros -->
+
+          <label>Quantidade de Parcelas:</label>
+          <!-- Campo para inserir o número de parcelas -->
+          <input type="number" id="parcelas" placeholder="Ex: 48" required>
+          <!-- Input numérico para o número de parcelas -->
+
+          <button onclick="calcular()">Calcular</button>
+          <!-- Botão para executar o cálculo -->
+
+          <div class="resultado" id="resultado">
+              <!-- Div para exibir os resultados, inicialmente oculta -->
+              <h3>Resultado da Simulação</h3>
+              <!-- Título dos resultados -->
+              <p id="valorParcela"></p>
+              <!-- Parágrafo para o valor da parcela -->
+              <p id="valorTotal"></p>
+              <!-- Parágrafo para o total a pagar -->
+          </div>
+      </div>
+
+<script>
+// Função JavaScript para calcular o financiamento usando a fórmula PRICE
+function calcular() {
+    // Obtém os valores dos campos de entrada
+    let valor = parseFloat(document.getElementById("valor").value); // Valor do veículo
+    let entrada = parseFloat(document.getElementById("entrada").value) || 0; // Valor da entrada (padrão 0 se vazio)
+    let juros = parseFloat(document.getElementById("juros").value) / 100; // Taxa de juros convertida para decimal
+    let parcelas = parseInt(document.getElementById("parcelas").value); // Número de parcelas
+
+    // Calcula o valor financiado (valor do veículo menos entrada)
+    let financiado = valor - entrada;
+
+    // Fórmula de financiamento PRICE para calcular o valor da parcela
+    let parcela = financiado * (juros * (1 + juros) ** parcelas) / ((1 + juros) ** parcelas - 1);
+    // Calcula o total a pagar (parcela vezes número de parcelas)
+    let total = parcela * parcelas;
+
+    // Exibe o valor da parcela formatado
+    document.getElementById("valorParcela").innerText = 
+        "Valor da Parcela: R$ " + parcela.toFixed(2);
+
+    // Exibe o total a pagar formatado
+    document.getElementById("valorTotal").innerText = 
+        "Total a Pagar: R$ " + total.toFixed(2);
+
+    // Torna o resultado visível
+    document.getElementById("resultado").style.display = "block";
+}
+</script>
+
+<footer class="rodape">
+  <!-- Rodapé da página -->
+  Siga-nos nas redes sociais:<br>
+    <a href="https://www.instagram.com/">Instagram</a><br>
+    <a href="https://www.facebook.com/">Facebook</a><br>
+    <a href="https://x.com/">X</a><br>
+    <p>© 2025 Projetinho desgraçado em html.</p>
+    <!-- Informações de direitos autorais -->
+</footer>
+</body>
+</html>

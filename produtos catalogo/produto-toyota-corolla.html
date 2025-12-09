@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="../js/jason.js" defer></script>
+    <link rel="icon" href="../img/logo.png" type="image/png">
+    <title>Toyota Corolla</title>
+</head>
+<body>
+    <header>
+      <a href="../home.html">
+        <img src="../img/logo.png" width="130" height="110"><span class="logo"></span>
+      </a>
+      <nav>
+      <ul class="navlinks">
+        <li><a href="../home.html" id="nav-inicio">Início</a></li>
+        <li><a href="../catalogo.html" id="nav-catalogo">Catálogo</a></li>
+        <li><a href="../financiamento.html" id="nav-financiamento">Simular Financiamento</a></li>
+        <li><a href="../fipe.html" id="nav-fipe">Tabela Fipe</a></li>
+      </ul>
+      </nav>
+      <a>
+        <button onclick="window.location.href='../login.php'" type="submit">Login/Cadastro</button>
+      </a>
+      <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      </header>
+
+    <div class="produto-container">
+        <h1 class="Inicial">Toyota Corolla</h1>
+        <div class="produto-detalhes">
+            <img src="../img/Toyota_Corolla_Style_(2016_European_version).jpg" alt="Toyota Corolla" width="400" height="300">
+            <div class="produto-info">
+                <h2>Preço: R$ 90.000</h2>
+                <p><strong>Descrição:</strong> O Toyota Corolla é um sedã confiável e eficiente, conhecido por sua durabilidade e baixo custo de manutenção. Ideal para quem busca conforto e economia.</p>
+                <p><strong>Características:</strong></p>
+                <ul>
+                    <li>Motor 1.8L flex</li>
+                    <li>Transmissão automática CVT</li>
+                    <li>Ar condicionado</li>
+                    <li>Direção hidráulica</li>
+                    <li>Freios ABS</li>
+                </ul>
+                <button onclick="alert('Funcionalidade de compra em desenvolvimento')">Comprar Agora</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="rodape">
+        Siga-nos nas redes sociais:<br>
+        <button onclick="window.open('https://www.instagram.com/', '_blank')">Instagram</button><br>
+        <button onclick="window.open('https://www.facebook.com/', '_blank')">Facebook</button><br>
+        <button onclick="window.open('https://x.com/', '_blank')">X</button><br>
+        <p>© 2025 Projetinho desgraçado em html.</p>
+    </footer>
+</body>
+</html>
+

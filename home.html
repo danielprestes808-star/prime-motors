@@ -1,0 +1,104 @@
+<!-- Esta é a página inicial do site "Prime Motors", uma concessionária de carros. -->
+<!-- Exibe um cabeçalho de navegação, um título, destaques de carros em um carrossel e um rodapé. -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <!-- Define a codificação de caracteres como UTF-8 -->
+    <meta name= "viewport" content="width=device-width, inicial-scale=1.0">
+    <!-- Configura a viewport para dispositivos móveis -->
+    <link rel="stylesheet" href="css/styles.css?v=1.1">
+    <!-- Vincula a folha de estilos CSS externa -->
+    <script src="js/jason.js" defer></script>
+    <!-- Carrega o script JavaScript externo de forma assíncrona -->
+    <link rel="icon" href="img\logo.png" type="image/png">
+    <!-- Define o ícone da página -->
+    <title>Prime Motors</title>
+    <!-- Título da página exibido na aba do navegador -->
+</head>
+      <!--navbar-->
+    <header>
+      <!-- Cabeçalho da página com navegação -->
+      <a href="home.html">
+        <!-- Link para a página inicial -->
+        <img src="img\logo.png" width="130" height="110" alt="Prime Motors Logo">
+        <span class="logo"></span>
+        <!-- Logo da empresa -->
+      </a>
+      <nav>
+        <!-- Menu de navegação -->
+      <ul class="navlinks">
+         <li><a href="home.html">Início</a>
+            <!-- Link para a página inicial -->
+            <li><a href="catalogo.html">Catálogo</a>
+            <!-- Link para o catálogo de carros -->
+            <li><a href="financiamento.html">Simular Financiamento</a></li>
+             <!-- Link para a simulação de financiamento -->
+             <li><a href="fipe.html">Tabela Fipe</a></li>
+             <!-- Link para a tabela FIPE -->
+      </ul>
+      </nav>
+      <a>
+        <!-- Link para a página de login/cadastro -->
+        <button onclick="window.location.href='login.php'" type="submit">Login/Cadastro</button>
+        <!-- Botão para acessar login/cadastro -->
+      </a>
+      <div class="hamburger" onclick="toggleMenu()">
+        <!-- Menu hambúrguer para dispositivos móveis -->
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      </header>
+      <!--navbar fim-->
+<body>
+      <!-- Corpo da página -->
+      <h1 class="Inicial">Destaques:</h1>
+      <!-- Título principal da página -->
+  
+    <h2 class="Escolha">Veja os modelos:</h2>
+       <!-- Subtítulo para a seção de destaques -->
+
+<!--carrossel-->
+<div class="carrossel-container">
+  <!-- Container do carrossel de imagens -->
+  <div class="slides">
+    <!-- Div que contém as imagens do carrossel -->
+    <img src="img\4ubxkwfhpe13kou1itxmwsn1a.jpg" title="Imagem 1" width="500" height="300" class="espacamento-imagem">
+    <!-- Imagem do carrossel -->
+    <img src="img\2010_Volkswagen_Golf_(5K_MY11)_77TSI_5-door_hatchback_(2015-07-03)_01.jpg" title="Imagem 1" width="500" height="300" class="espacamento-imagem">
+    <img src="img\2017_Ford_Focus_(LZ)_Sport_hatchback_(2017-11-18)_01.jpg" title="Imagem 1" width="500" height="300" class="espacamento-imagem">
+    <img src="img\Chevrolet-Onix-LT-2022.jpg" title="Imagem 1" width="500" height="300" class="espacamento-imagem">
+    <img src="img\eeb77cf760e29e7a55b789bae7ef50e8-thumbjpeg-jeep-renegade-13436165-768-576-70.jpg" title="Imagem 1" width="500" height="300" class="espacamento-imagem">
+    <img src="img\Fiat_Toro_2018_in_Punta_del_Este_(front)_01.jpg" title="Imagem 1" width="500" height="300" class="espacamento-imagem">
+    <img src="img\Fiat-Argo-Drive-1-3-S-Design_e4c1e8a4-525x350.jpg" title="Imagem 1" width="500" height="300" class="espacamento-imagem">
+    <img src="img\hyundai-hb20-diamond-plus-2020.jpg" title="Imagem 1" width="500" height="300" class="espacamento-imagem">
+    <img src="img\main_webp_comprar-novo-cruze-2021-39c92b38-dec7-4b8f-a9c9-6df7f6438d1d_385c6e9db0.jpg.jpg" title="Imagem 1" width="500" height="300" class="espacamento-imagem">
+    <img src="img\Toyota_Corolla_Style_(2016_European_version).jpg" title="Imagem 1" width="500" height="300" class="espacamento-imagem">
+    <img src="img\Volkswagen_Saveiro_Mk8_Double_Cab_base_black_in_Maldonado_-_front.jpg" title="Imagem 1" width="500" height="300" class="espacamento-imagem">
+  </div>
+  <!-- Botões de navegação -->
+  <div class="botoes-navegacao">
+    <!-- Container dos botões de navegação do carrossel -->
+    <button class="botao-esquerda">&#10094;</button>
+    <!-- Botão para navegar para a esquerda -->
+    <button class="botao-direita">&#10095;</button>
+    <!-- Botão para navegar para a direita -->
+  </div>
+  <!-- Fim dos botões de navegação -->
+</div>
+<!--fim do carrossel -->
+
+
+<footer class="rodape">
+  <!-- Rodapé da página -->
+  Siga-nos nas redes sociais:<br>
+    <button onclick="window.open('https://www.instagram.com/', '_blank')">Instagram</button><br>
+    <button onclick="window.open('https://www.facebook.com/', '_blank')">Facebook</button><br>
+    <button onclick="window.open('https://x.com/', '_blank')">X</button><br>
+
+    <p>© 2025 Projetinho desgraçado em html.</p>
+    <!-- Informações de direitos autorais -->
+</footer>
+    
+</html>
